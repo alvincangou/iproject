@@ -1,0 +1,42 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.cangou.gwd",
+      "nativeLanguage": "fr"
+    },
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "monolith",
+    "baseName": "iproject",
+    "packageName": "com.cangou.gwd",
+    "packageFolder": "com/cangou/gwd",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZjU0NGE0NjlkYzAyNzA3YTM0YjNmMzE4NTA0NWMyY2FjOGY5YzIxMTdmMmIxNjhlMTg1MWM5YTQ3NTE2MDhlOTRiZTAwNWIxNmM2NDlkYzcyM2U4ZWM5ZGZlN2NmY2E0ZWI3OGI4OGMxNDg2YzRmZDc0YzgyZjI4NjZiODI3NGY=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1610318793548,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "fr",
+    "languages": ["fr", "en"],
+    "blueprints": []
+  }
+}
