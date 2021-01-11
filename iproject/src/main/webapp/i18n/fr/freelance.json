@@ -1,0 +1,22 @@
+{
+  "iprojectApp": {
+    "freelance": {
+      "home": {
+        "title": "Freelances",
+        "createLabel": "Créer un nouveau Freelance",
+        "createOrEditLabel": "Créer ou éditer un Freelance",
+        "notFound": "Aucun Freelance trouvé"
+      },
+      "created": "Un nouveau Freelance a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Freelance avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Freelance avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Freelance {{ id }} ?"
+      },
+      "detail": {
+        "title": "Freelance"
+      },
+      "belong": "Belong"
+    }
+  }
+}
