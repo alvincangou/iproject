@@ -1,0 +1,59 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.9.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <changeSet author="cango (generated)" id="1606680365402-1">
+        <createTable tableName="car">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="carPK"/>
+            </column>
+            <column name="brand" type="VARCHAR(255)"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="year" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="cango (generated)" id="1606680365402-2">
+        <createTable tableName="freelance">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="freelancePK"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="cango (generated)" id="1606680365402-3">
+        <createTable tableName="order">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="orderPK"/>
+            </column>
+            <column name="request" type="VARCHAR(255)"/>
+            <column name="status" type="VARCHAR(255)"/>
+            <column name="user" type="TINYBLOB"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="cango (generated)" id="1606680365402-4">
+        <createTable tableName="working_range">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="working_rangePK"/>
+            </column>
+            <column name="end_time" type="datetime(6)"/>
+            <column name="start_time" type="datetime(6)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="cango (generated)" id="1606680365402-5">
+        <addColumn tableName="jhi_user">
+            <column name="country_code" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="cango (generated)" id="1606680365402-6">
+        <addColumn tableName="jhi_user">
+            <column name="creation_date" type="datetime(6)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="cango (generated)" id="1606680365402-7">
+        <addColumn tableName="jhi_user">
+            <column name="dtype" type="varchar(31)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="cango (generated)" id="1606680365402-8">
+        <addForeignKeyConstraint baseColumnNames="user" baseTableName="order" constraintName="FKpxieehvuh8snedp938833wx3d" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="jhi_user" validate="true"/>
+    </changeSet>
+</databaseChangeLog>
