@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Work.
+    -->
+    <changeSet id="20210125034127-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="done_by_id"
+                                 baseTableName="work"
+                                 constraintName="fk_work_done_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="freelancer"/>
+
+        <addForeignKeyConstraint baseColumnNames="work_id"
+                                 baseTableName="work_executed_on"
+                                 constraintName="fk_work_executed_on_work_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="work"/>
+
+        <addForeignKeyConstraint baseColumnNames="executed_on_id"
+                                 baseTableName="work_executed_on"
+                                 constraintName="fk_work_executed_on_executed_on_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="freelance"/>
+        
+    </changeSet>
+</databaseChangeLog>

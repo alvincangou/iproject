@@ -20,6 +20,10 @@ import freelancer, {
 import freelance, {
   FreelanceState
 } from 'app/entities/freelance/freelance.reducer';
+// prettier-ignore
+import work, {
+  WorkState
+} from 'app/entities/work/work.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -35,6 +39,7 @@ export interface IRootState {
   readonly settings: SettingsState;
   readonly freelancer: FreelancerState;
   readonly freelance: FreelanceState;
+  readonly work: WorkState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -52,6 +57,7 @@ const rootReducer = combineReducers<IRootState>({
   settings,
   freelancer,
   freelance,
+  work,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar,
 });

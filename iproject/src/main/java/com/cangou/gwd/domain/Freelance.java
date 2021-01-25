@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
 
 /**
  * A Freelance.
@@ -22,6 +23,12 @@ public class Freelance implements Serializable {
     @ManyToOne
     @JsonIgnoreProperties(value = "freelances", allowSetters = true)
     private Freelancer belong;
+
+    @ManyToMany
+    @JoinTable(name = "work_executed_on",
+        joinColumns=@JoinColumn(name = "executed_on_id", referencedColumnName = "id"),
+        inverseJoinColumns = @JoinColumn(name = "work_id", referencedColumnName = "id"))
+    private Set<Work> executes;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -68,5 +75,9 @@ public class Freelance implements Serializable {
         return "Freelance{" +
             "id=" + getId() +
             "}";
+    }
+
+    public Set<Work> getExecutes() {
+        return this.executes;
     }
 }
